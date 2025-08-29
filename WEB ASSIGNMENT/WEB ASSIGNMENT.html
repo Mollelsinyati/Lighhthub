@@ -1,0 +1,1021 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+
+
+  <title>ONLINE SELLING OF FURNITURE.</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: black;
+      padding: 20px 100px;
+      font-size: 0.9rem;
+       position: fixed;
+    z-index: 1000;
+    width: 100%;
+    background-color: black;
+    
+     
+    }
+
+    .logo img {
+      height: 30px;
+      padding-left:20px;
+    }
+    
+    nav a {
+      color: white;
+      margin: 0 10px;
+      text-decoration: none;
+      margin-right: 35px;
+      text-align: center;
+    }
+
+    section {
+      padding: 80px 20px;
+  
+    }
+
+    /* HOME Section */
+   #home {
+  background: url('assets/BUILT-Furniture_0008s_0002s_0001_Untitled.png') no-repeat center center/cover;
+  height: 110vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  text-align: center;
+  padding: 20px;
+}
+
+.home-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: rgba(90, 86, 86, 0.4); /* dark gray fade */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.home-content {
+  color: white;
+  max-width: 1200px;
+  padding-top: 160px;
+  z-index: 1;
+}
+
+#home h1 {
+  font-size: 79px;
+  color: white;
+  margin-bottom: 3px;
+}
+
+#home p {
+  font-size: 18px;
+  color: #f0f0f0;
+  line-height: 1.5;
+}
+
+
+
+/* WHY US Section */
+#whyus {
+  background-color: rgb(21, 20, 20);
+  text-align: center;
+  padding: 60px 20px;
+}
+
+#whyus h2 {
+   color: rgb(197, 159, 79);
+  margin-bottom: 40px;
+}
+
+.whyus-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  flex-wrap: wrap;
+}
+
+.whyus-side {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.whyus-paragraph {
+  display: flex;
+  align-items: center;
+  color: white;
+  width: 300px;
+}
+
+.whyus-paragraph1 {
+  display: flex;
+  align-items: center;
+  color: white;
+  width: 300px;
+}
+
+.whyus-side.left .whyus-paragraph {
+  flex-direction: row; /* text then icon */
+}
+
+.whyus-side.right .whyus-paragraph1 {
+  flex-direction: row; /* icon then text */
+}
+
+.whyus-paragraph .text {
+  
+  text-align: right;
+  font-size: 0.7rem;
+  padding-bottom: 20px;
+}
+
+.whyus-paragraph1 .text {
+
+  text-align: left;
+  font-size: 0.7rem;
+  padding-bottom: 20px;
+}
+
+.whyus-paragraph h3 {
+  color: rgb(197, 159, 79);
+  margin-bottom: 5px;
+  font-size: 1.1rem;
+}
+
+.whyus-paragraph1 h3 {
+   color: rgb(197, 159, 79);
+  margin-bottom: 5px;
+  font-size: 1.1rem;
+}
+
+.whyus-icon {
+  flex-shrink: 100%;
+  width: 50px;
+  height: 50px;
+  margin: 0 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: -40px; 
+  margin-right: 10px; 
+}
+
+.whyus-icon1 {
+  width: 50px;
+  height: 50px;
+  margin: 0 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: -40px; 
+  margin-left: 10px; 
+}
+
+.whyus-icon img {
+  width: 150%;
+  height: 150%;
+  object-fit: contain;
+  border-radius: 50%; 
+}/* Optional: keeps it circular if image supports it */
+
+.whyus-icon1 img {
+  width: 150%;
+  height: 150%;
+  object-fit: contain;
+  border-radius: 50%; /* Optional: keeps it circular if image supports it */
+}
+
+.whyus-image {
+  width: 300px;
+  height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.whyus-image img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: cover;
+}
+
+
+    /* COLLECTION Section */
+    #collection {
+      background-color: rgb(255, 255, 255);
+      color: black;
+      text-align: center;
+      padding-top: 20px;
+      padding-bottom: 140px;
+      margin: 50px;
+      }
+
+    .collection-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 25px;
+      padding-left: 120px;
+    }
+
+    .item {
+      position: relative;
+      background-color: white;
+      padding: 10px;
+      overflow: hidden;
+      cursor: pointer;
+      padding-bottom: 20px;
+       
+  /* Blur-like outer shadow */
+  box-shadow: 0 0 10px rgba(241, 241, 241, 0.943);
+    }
+
+    .item .new-label {
+  position: absolute;
+  top: 22.5px;
+  left: -22.5px;
+  background: red;
+  color: white;
+  transform: rotate(-45deg); /* Perfect 45-degree tilt */
+  transform-origin: top left;
+  padding: 10px 20px;
+  font-size: 10px;
+  inline-size: max-content;
+  font-weight: bold;
+  z-index: 2;
+  box-shadow: 0 0 5px rgba(0,0,0,0.3);
+}
+
+
+    .item img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+
+    .item .description {
+      margin-top: 10px;
+      text-align: left;
+    }
+
+    .item:hover .hover-overlay {
+      display: flex;
+    }
+
+    .hover-overlay {
+      display: none;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: rgba(243, 192, 99, 0.6);
+      justify-content: center;
+      align-items: center;
+    }
+
+ .icon-box {
+  background: #222;
+  padding: 10px 20px;
+  border-radius: 999px; /* pill shape */
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Transparent icon fill, with visible white outline */
+.icon-box i {
+  font-size: 20px;
+  color: transparent;
+  -webkit-text-stroke: 1.5px white;
+  text-stroke: 1.5px white;
+  cursor: pointer;
+}
+
+
+.icon-box span {
+  background: #222;
+  padding: 10px;
+  border-radius: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+    /* DESIGNER Section */
+    
+            .designer{
+                background-image: url(Image/OUR\ DESIGNER.png);
+                background-size: cover;
+                background-position: center;
+                height: 600px;
+                position: relative;                
+                color:yellow;
+                grid-template-columns: 3 , 1fr;
+            }
+            .container{
+            text-align: center;
+            padding: 50px 20px;
+            background-color: rgba(0,0,0,0.5);
+        }
+        .designers{
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            flex-wrap: wrap;
+        }
+        .card{
+            background-color: #ddd;
+            width: 200px;
+            height: 250px;
+            position: relative;
+        }
+        .name-bar{
+            position: absolute;
+            bottom: -40px;
+            left: 0;
+            width: 100%;
+            text-align: center;
+            color: white;
+        }
+        .name-bar span{
+            position: relative;
+            font-weight: bold;
+        }
+        .name-bar span::before,
+        .name-bar span::after{
+            content: "";
+            position: absolute;
+            top: 50%;
+            width: 30px;
+            height: 2px;
+            background-color: #f5c15e;
+        }
+        .name-bar span::before{
+            left: -40px;
+        }
+        .name-bar span::after{
+            right: -40px;
+        }
+        .image{
+            background-image: url(assets/OUR\ DESIGNER.png);
+            padding: 70px 100px;
+            height: 70%;
+            background-size: cover;
+            background-position: center;
+            opacity: 90%;
+        }
+
+/* PROJECT Section */
+
+ .project-section{
+            text-align: center;
+            padding: 40px 20px;
+            font-family: sans-serif;
+            background-image: url(assets/our\ project\ background.png);
+            overflow: hidden;
+            flex: 4;
+            width: 100%;
+            gap: 0%;
+ }
+.project {
+  height: 150vh;
+  overflow: hidden;
+  position: relative;
+  padding-top: 50px;
+  text-align: center;
+background-color: #97979700;
+}
+
+.project-heading {
+  font-size: 2.8rem; /* Increased font size */
+  margin-bottom: 40px; /* Space between title and images */
+  color: #000000;
+  font-weight: bold;
+  text-align: center;
+}
+
+/* Slider Container */
+.project-slider {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  z-index: 1;
+}
+
+/* Each Project Image Block */
+.project-image {
+  position: relative;
+  flex: 1;
+  overflow: hidden;
+min-height: 400px;
+}
+
+/* Dark overlay on images */
+.project-image::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 1;
+}
+
+/* Images */
+.project-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Image Title at the Top (No Background) */
+.project-title {
+  position: absolute;
+  top: 15px;
+  left: 20px;
+  color: white;
+  font-size: 1.6rem;
+  font-weight: bold;
+  z-index: 2;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+/* Caption from bottom up, on left side (No Background) */
+.project-caption {
+  position: absolute;
+  bottom: 10px;
+  left: 0;
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+  color: white;
+  letter-spacing: 10px;
+  font-size: 1.2rem;
+  padding-left: 8px;
+  z-index: 2;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+/* Slider Arrow (←) */
+.slider-arrow1 {
+  position: absolute;
+  top: 50%;
+  left: 10px;
+  transform: translateY(-50%);
+  font-size: 1.5rem;
+  color: white;
+  background: rgba(155, 152, 152, 0.5);
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 3;
+  border-radius: 50%;
+  padding: 0;
+}
+.slider-arrow2 {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: rotate(-180deg);
+  font-size: 1.5rem;
+  color: white;
+  background: rgba(155, 152, 152, 0.5);
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 3;
+  border-radius: 50%;
+  padding: 0;
+}
+
+/* blog section*/
+.blog-section {
+      padding: 60px 40px;
+      background-color: #f8f8f8;
+    }
+
+    .blog-section h2 {
+      text-align: center;
+      font-size: 36px;
+      margin-bottom: 40px;
+      color: #333;
+    }
+
+    .blog-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .blog-card {
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+
+    .blog-card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 5px;
+    }
+
+    .blog-card h3 {
+      font-size: 20px;
+     
+    }
+
+    .blog-card p {
+      font-size: 16px;
+      color: #555;
+    }
+
+    .read-more-btn {
+      margin-top: 15px;
+      padding: 10px 16px;
+      background-color:#fcb900;
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      text-decoration: none;
+      display: inline-block;
+      cursor: pointer;
+    }
+
+    .read-more-btn:hover {
+      background-color: rgb(197, 159, 79);
+    }
+
+
+    /* Contact section */
+.contact-section {
+  background-color: #000;
+  padding: 40px 20px;
+}
+
+.top-row {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  margin-bottom: 40px;
+}
+
+.top-group {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px; /* Space between vertical line and content */
+}
+
+.vertical-line {
+  width: 2px;
+  height: 100px;
+  background-color: rgb(197, 159, 79); /* This makes the line visible */
+}
+
+.top-item {
+  max-width: 250px;
+}
+
+.top-title {
+  font-size: 1.1em;
+  margin-bottom: 10px;
+  color: rgb(197, 159, 79);
+  font-weight: bold;
+}
+
+.top-item p {
+  font-weight: normal;
+  color: white;
+  margin: 4px 0;
+}
+
+.bottom-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: space-around;
+}
+
+.image-box {
+  flex: 1;
+  min-width: 200px;
+}
+
+.image-box img {
+  width: 100%;
+  max-width: 250px;
+  height: auto;
+  padding-left: 100px;
+}
+
+.hours-box, .newsletter-box {
+  flex: 1;
+  min-width: 250px;
+}
+
+.hours-box h3, .newsletter-box h3 {
+  margin-bottom: 10px;
+  color: white; /* Make sure headings are visible */
+}
+
+.hours-box p,
+.newsletter-box p {
+  color: white;
+}
+
+.newsletter-box input[type="email"] {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: none;
+  border-radius: 5px;
+}
+
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <div class="logo">
+      <img src="assets/logo.png" >
+    
+    </div>
+    <nav>
+      <a href="#home">HOME</a>
+      <a href="#whyus">WHY US</a>
+      <a href="#collection">COLLECTION</a>
+      <a href="#design">DESIGNER</a>
+      <a href="#project">PROJECT</a>
+      <a href="#blog">BLOG</a>
+      <a href="#contact">CONTACT</a>
+    </nav>
+  </header>
+
+  <!-- HOME Section -->
+<section id="home">
+  <div class="home-content">
+     <div class="home-overlay"></div>
+    <h1>CRAFTED FOR COMFORT.<br>BUILT TO LAST</h1>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore<br> et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut<br> aliquip ex ea commodo consequat.</p>
+    </p>
+  </div>
+</section>
+
+
+<!-- WHY US Section -->
+<section id="whyus">
+  <h2>WHY CHOOSE US</h2>
+  <div class="whyus-container">
+    
+    <!-- Left side paragraphs -->
+    <div class="whyus-side left">
+      <div class="whyus-paragraph">
+        <div class ="text">
+          <h3>MORDERN DESIGN</h3>
+          <p>Lorem ipsum dolor sit amet, consecte-<br>tur adipiscing elit, sed do eiusmod<br> tempor incididunt ut labore et dolore<br> magna aliqua.
+       </p>
+        </div>
+        <div class="whyus-icon">
+         <img src="assets/hammer1.png" alt="Modern Design Icon" /> 
+        </div>
+      </div>
+       
+      <div class="whyus-paragraph">
+        <div class="text">
+          <h3>UNIQUE QUALITY</h3>
+          <p>Lorem ipsum dolor sit amet, consecte-<br>tur adipiscing elit, sed do eiusmod<br> tempor incididunt ut labore et dolore<br> magna aliqua.
+       </p>
+      </div>
+       <div classs="whyus-icon"> 
+        <img src="assets/quality1.png" alt="Modern Design Icon" /> 
+       </div>
+      </div>
+       </div>
+
+    <!-- Center image -->
+    <div class="whyus-image">
+      <img src="assets/BUILT-Furniture_0006s_0001s_0000_Layer-1.png" alt="Why Us Image">
+    </div>
+
+    <!-- Right side paragraphs -->
+    <div class="whyus-side right">
+      <div class="whyus-paragraph1">
+        <div class="whyus-icon1">
+          <img src="assets/cash.png" alt="Modern Design Icon" />
+        </div>
+        <div class="text">
+          <h3>HONEST PRICES</h3>
+          <p>Lorem ipsum dolor sit amet, consecte-<br>tur adipiscing elit, sed do eiusmod<br> tempor incididunt ut labore et dolore<br> magna aliqua.
+       </p>
+        </div>
+      </div>
+      <div class="whyus-paragraph1">
+        <div class="whyus-icon1">
+          <img src="assets/call.png" alt="Modern Design Icon" />
+        </div>
+        <div class="text">
+          <h3>GREAT SUPPORT</h3>
+          <p>Lorem ipsum dolor sit amet, consecte-<br>tur adipiscing elit, sed do eiusmod<br> tempor incididunt ut labore et dolore<br> magna aliqua.
+     </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+  <!-- COLLECTION Section -->
+  <section id="collection">
+    <h2 style="line-height: 1.5; padding: 50px; font-size: 2.8rem;">OUR COLLECTION</h2>
+    <div class="collection-grid">
+      <!-- Repeat this item for 8 times -->
+      <div class="item">
+        <span class="new-label">NEW</span>
+        <img src="assets/BUILT-Furniture_0004s_0000s_0001s_0001s_0000_Layer-10.png" alt="Item 1">
+        <div class="description"><h1 style="font-size: 1.5;">CORONA CHAIR</h1><br>
+        <p style="color: grey;">Printed evening dress with <br>straight sleeves</p><br>
+        <h2 style="font-size: 1.8rem; font-family: sans-serif;">25OK</h2>
+        </div>
+        <div class="hover-overlay">
+          <div class="icon-box">
+  <i class="fas fa-search"></i>
+  <i class="fas fa-shopping-cart"></i>
+  <i class="fas fa-heart"></i>
+</div>
+        </div>
+      </div>
+      <!-- Repeat or duplicate above block for 8 items -->
+      <div class="item">
+        <img src="assets/BUILT-Furniture_0004s_0000s_0002s_0002s_0000_Layer-9-copy.png" alt="Item 2">
+        <div class="description"><h1 style="font-size: 1.5;">CORONA CHAIR</h1><br>
+        <p style="color: grey;">Printed evening dress with <br>straight sleeves</p><br>
+        <h2 style="font-size: 1.8rem; font-family: sans-serif;">25OK</h2>
+        </div>
+        <div class="hover-overlay">
+          <div class="icon-box">
+  <i class="fas fa-search"></i>
+  <i class="fas fa-shopping-cart"></i>
+  <i class="fas fa-heart"></i>
+</div>
+        </div>
+      </div>
+<!-- Repeat this item for 8 times -->
+      <div class="item">
+        <span class="new-label">NEW</span>
+        <img src="assets/BUILT-Furniture_0004s_0000s_0005s_0002s_0000_Layer-6.png" alt="Item 1">
+        <div class="description"><h1 style="font-size: 1.5;">CORONA CHAIR</h1><br>
+        <p style="color: grey;">Printed evening dress with <br>straight sleeves</p><br>
+        <h2 style="font-size: 1.8rem; font-family: sans-serif;">25OK</h2>
+        </div>
+        <div class="hover-overlay">
+          <div class="icon-box">
+  <i class="fas fa-search"></i>
+  <i class="fas fa-shopping-cart"></i>
+  <i class="fas fa-heart"></i>
+</div>
+        </div>
+      </div>
+      <!-- Repeat or duplicate above block for 8 items -->
+      <div class="item">
+        <img src="assets/BUILT-Furniture_0004s_0000s_0004s_0001s_0000_Layer-7.png" alt="Item 2">
+        <div class="description"><h1 style="font-size: 1.5;">CORONA CHAIR</h1><br>
+        <p style="color: grey;">Printed evening dress with <br>straight sleeves</p><br>
+        <h2 style="font-size: 1.8rem; font-family: sans-serif;">25OK</h2>
+        </div>
+        <div class="hover-overlay">
+          <div class="icon-box">
+  <i class="fas fa-search"></i>
+  <i class="fas fa-shopping-cart"></i>
+  <i class="fas fa-heart"></i>
+</div>
+        </div>
+      </div>
+        <!-- Repeat this item for 8 times -->
+      <div class="item">
+        <img src="assets/BUILT-Furniture_0004s_0000s_0003s_0001s_0000_Layer-8.png" alt="Item 1">
+        <div class="description"><h1 style="font-size: 1.5;">CORONA CHAIR</h1><br>
+        <p style="color: grey;">Printed evening dress with <br>straight sleeves</p><br>
+        <h2 style="font-size: 1.8rem; font-family: sans-serif;">25OK</h2>
+        </div>
+        <div class="hover-overlay">
+          <div class="icon-box">
+  <i class="fas fa-search"></i>
+  <i class="fas fa-shopping-cart"></i>
+  <i class="fas fa-heart"></i>
+</div>
+        </div>
+      </div>
+      <!-- Repeat or duplicate above block for 8 items -->
+      <div class="item">
+        <img src="assets/BUILT-Furniture_0004s_0000s_0006s_0001s_0000_Layer-9.png" alt="Item 2">
+        <div class="description"><h1 style="font-size: 1.5;">CORONA CHAIR</h1><br>
+        <p style="color: grey;">Printed evening dress with <br>straight sleeves</p><br>
+        <h2 style="font-size: 1.8rem; font-family: sans-serif;">25OK</h2>
+        </div>
+        <div class="hover-overlay">
+          <div class="icon-box">
+  <i class="fas fa-search"></i>
+  <i class="fas fa-shopping-cart"></i>
+  <i class="fas fa-heart"></i>
+</div>
+        </div>
+      </div>
+        <!-- Repeat or duplicate above block for 8 items -->
+      <div class="item">
+        <span class="new-label">NEW</span>
+        <img src="assets/BUILT-Furniture_0004s_0000s_0002s_0002s_0000_Layer-9-copy.png" alt="Item 2">
+        <div class="description"><h1 style="font-size: 1.5;">CORONA CHAIR</h1><br>
+        <p style="color: grey;">Printed evening dress with <br>straight sleeves</p><br>
+        <h2 style="font-size: 1.8rem; font-family: sans-serif;">25OK</h2>
+        </div>
+        <div class="hover-overlay">
+          <div class="icon-box">
+  <i class="fas fa-search"></i>
+  <i class="fas fa-shopping-cart"></i>
+  <i class="fas fa-heart"></i>
+</div>
+        </div>
+      </div>
+        <!-- Repeat or duplicate above block for 8 items -->
+      <div class="item">
+        <img src="assets/BUILT-Furniture_0004s_0000s_0001s_0001s_0000_Layer-10.png" alt="Item 2">
+        <div class="description"><h1 style="font-size: 1.5;">CORONA CHAIR</h1><br>
+        <p style="color: grey;">Printed evening dress with <br>straight sleeves</p><br>
+        <h2 style="font-size: 1.8rem; font-family: sans-serif;">25OK</h2>
+        </div>
+        <div class="hover-overlay">
+          <div class="icon-box">
+  <i class="fas fa-search"></i>
+  <i class="fas fa-shopping-cart"></i>
+  <i class="fas fa-heart"></i>
+</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- DESIGNER Section -->
+  <section id="design" class="image">
+        <div class="container">
+            <h1 style="color: #f5c15e; letter-spacing: 2px; margin-bottom: 50px;">OUR DESIGNER</h1>
+            <div class="designers">
+                <div class="card">
+                    <div class="name-bar"><span>JOHN DOE</span></div>
+                </div>
+                <div class="card">
+                    <div class="name-bar"><span>JOHN DOE</span></div>
+                </div>
+                <div class="card">
+                    <div class="name-bar"><span>JOHN DOE</span></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+<!-- PROJECT Section -->
+<section id="project" class="project-section">
+  <h2 class="project-heading" style="padding-bottom: 30px;">OUR PROJECT</h2>
+  <div class="project-slider">
+    <div class="slider-arrow1">&#10094;</div>
+
+    <div class="project-image">
+      <h3 class="project-title" style="text-align: left;">MODERN LIVING ROOM</h3>
+      <img src="assets/BUILT-Furniture_0002s_0006s_0003_breather-168751.png" alt="Project 1">
+      <div class="project-caption">INTERIOR DESIGN</div>
+    </div>
+
+    <div class="project-image">
+      <h3 class="project-title" style="text-align: left;">MODERN LIVING ROOM</h3>
+      <img src="assets/BUILT-Furniture_0002s_0002s_0003_breather-196126.png" alt="Project 2">
+      <div class="project-caption">INTERIOR DESIGN</div>
+    </div>
+
+    <div class="project-image">
+      <h3 class="project-title" style="text-align: left;">MODERN LIVING ROOM</h3>
+      <img src="assets/BUILT-Furniture_0002s_0003s_0003_sabri-tuzcu-194020.png" alt="Project 3">
+      <div class="project-caption">INTERIOR DESIGN</div>
+    </div>
+
+    <div class="project-image">
+      <h3 class="project-title" style="text-align: left;">MODERN LIVING ROOM</h3>
+      <img src="assets/BUILT-Furniture_0002s_0004s_0003_breather-196130.png" alt="Project 4">
+      <div class="project-caption">INTERIOR DESIGN</div>
+      <div class="slider-arrow2">&#10094;</div>
+    </div>
+  </div>
+</section>
+
+
+      <!-- Blog -->
+       <section id="blog" class="blog-section">
+    <h2>FROM OUR BLOG</h2>
+    <div class="blog-grid">
+
+      <!-- Blog Post 1 -->
+      <div class="blog-card">
+        <img src="assets/BUILT-Furniture_0001s_0002s_0004_dan-gold-218879.png" alt="Blog 1">
+        <h3 style="padding-top: 20px;">SAMPLE STORY</h3>
+        <p style="color: #959595; padding-top: 20px;">Feel alive!So if you're looking for, here is a list of some of the most popular and fiestas the Mardin has to offer thisfiestas the Mardin has to offer!</p>
+        <a href="#" class="read-more-btn" style="color: #000000;">READ MORE</a>
+      </div>
+
+      <!-- Blog Post 2 -->
+      <div class="blog-card">
+        <img src="assets/BUILT-Furniture_0001s_0001s_0004_jason-briscoe-152940.png" alt="Blog 2">
+        <h3 style="padding-top: 20px;">SAMPLE STORY</h3>
+        <p style="color: #959595; padding-top: 20px;">Feel alive!So if you're looking for, here is a list of some of the most popular and fiestas the Mardin has to offer thisfiestas the Mardin has to offer!</p>
+        <a href="#" class="read-more-btn" style="color: #000000;">READ MORE</a>
+      </div>
+
+      <!-- Blog Post 3 -->
+      <div class="blog-card">
+        <img src="assets/BUILT-Furniture_0001s_0000s_0004_suhyeon-choi-195419.png" alt="Blog 3">
+        <h3 style="padding-top: 20px;">SAMPLE STORY</h3>
+        <p style="color: #959595; padding-top: 20px;">Feel alive!So if you're looking for, here is a list of some of the most popular and fiestas the Mardin has to offer thisfiestas the Mardin has to offer!</p>
+        <a href="#" class="read-more-btn" style="color: #000000;">READ MORE</a>
+      </div>
+
+    </div>
+  </section>
+  <!-- Placeholder Sections -->
+ <section id="contact" class="contact-section">
+  <div class="top-row">
+    <div class="top-group">
+      <div class="vertical-line"></div>
+      <div class="top-item">
+        <div class="top-title" style="padding-left: 20px;">CALL US NOW</div>
+        <p style="padding-left: 20px;">Office telephone:+255 766 000 000</p>
+        <p style="padding-left: 20px;">Hotline:+255 766 000 000</p>
+      </div>
+    </div>
+
+    <div class="top-group">
+      <div class="vertical-line"></div>
+      <div class="top-item">
+        <div class="top-title" style="padding-left: 20px;">COME VISIT US</div>
+        <p style="padding-left: 20px;">KEKO</p>
+        <p style="padding-left: 20px;">Temeke,Dar es salaam</p>
+      </div>
+    </div>
+
+    <div class="top-group">
+      <div class="vertical-line"></div>
+      <div class="top-item">
+        <div class="top-title" style="padding-left: 20px;">SEND A MESSAGE</div>
+        <p style="padding-left: 20px;">Email:sample@email.com</p>
+        <p style="padding-left: 20px;">Inquiries:sample@email.com</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="bottom-row">
+    <div class="image-box">
+      <img src="assets/logo.png" alt="Office Image">
+    </div>
+
+    <div class="hours-box" style="padding-left: 170px;">
+      <h3>Hours work</h3>
+      <p>Monday - Friday: 08.00 am - 17.00 pm.</p>
+      <p>Saturday - Sunday: 09.00 am - 12h30 pm.</p>
+    </div>
+
+    <div class="newsletter-box">
+      <h3>Newsletter</h3>
+      <input type="email" placeholder="Enter your email.....">
+      <p>Sign up to get exclusive offers from our favorite <br>brands and to be well up in the news.</p>
+    </div>
+  </div>
+</section>
+
+   
+</body>
+</html>
